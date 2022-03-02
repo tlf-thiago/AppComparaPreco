@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pesquisador de Precos</string>
+    <string name="stringNomeProduto">Nome do Produto</string>
+    <string name="stringPrecoProduto">Preço do Produto</string>
+
+    <string name="stringAdicionarProduto">Adicionar Produto</string>
+</resources>
