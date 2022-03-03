@@ -9,18 +9,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CadastrarProduto extends AppCompatActivity {
 
-    EditText editText;
+    EditText editTextNomeProduto;
+    EditText editTextPrecoProduto;
+
+    BancoDados bancoDados = new BancoDados(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.atividade_cadastrar_produto);
 
-        this.editText = (EditText) findViewById(R.id.editTextNomeProduto);
+        this.editTextNomeProduto = (EditText) findViewById(R.id.editTextNomeProduto);
+        this.editTextPrecoProduto = (EditText) findViewById(R.id.editTextPrecoProduto);
     }
 
     public void cliqueAdicionarProduto(View view){
-        Toast.makeText(getApplicationContext(), this.editText.getText().toString(), Toast.LENGTH_SHORT).show();
+        // bancoDados.adicionarProduto(new Produto("Abacaxi",3.1));
+
+        String mensagem = "Produto: " + this.editTextNomeProduto.getText().toString()
+                + "\n" + "Preço: " + this.editTextPrecoProduto.getText().toString();
+
+        Toast.makeText(getApplicationContext(), mensagem, Toast.LENGTH_SHORT).show();
         finish();
     }
 }
